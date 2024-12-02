@@ -17,10 +17,8 @@ public class Util {
         try {
             Class.forName(JDBC_DRIVER);
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Connected to database");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-            System.out.println("Failed to connect to database");
         }
         return connection;
     }
